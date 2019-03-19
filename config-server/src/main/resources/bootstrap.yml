@@ -5,11 +5,24 @@ eureka:
     service-url:
       defaultZone: http://localhost:8080/eureka #this is the register center's ip-address-service
 spring:
+  kafka:
+    bootstrap-servers:
+    - 118.24.138.39:9092
   application:
     name: config-server
   cloud:
+    bus:
+      refresh:
+        enabled: true
     config:
       server:
         git:
           uri: git@gitee.com:jk-crazy/spring-cloud-test.git
           search-paths: /**
+management:
+  endpoints:
+    web:
+      exposure:
+        #配置暴露服务 bus-refresh 刷新配置，bus-env 接收键值对配置
+        include: bus-refresh #这里具体怎么配置还不清楚 bus-refresh
+#配置消息总线 目前只能手动刷新，除非在云服务器上部署，再在git上配置个webhook，便能自动刷新配置

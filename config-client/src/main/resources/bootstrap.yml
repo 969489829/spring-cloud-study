@@ -5,6 +5,9 @@ eureka:
     service-url:
       defaultZone: http://localhost:8080/eureka
 spring:
+  kafka:
+    bootstrap-servers:
+    - 118.24.138.39:9092
   application:
     name: config-client
   cloud:
@@ -13,3 +16,8 @@ spring:
         service-id: config-server
         enabled: true
       profile: test
+      #name:  读取配置文件名，如果没有配置就读取application名称
+management:
+  endpoint:
+    refresh:
+      enabled: true
