@@ -1,14 +1,15 @@
+server:
+  port: 9000
 eureka:
-  instance:
-    prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://localhost:8080/eureka-server #this is the register center's ip-address-service
+      defaultZone: http://localhost:8080/eureka #this is the register center's ip-address-service
 spring:
+  application:
+    name: config-server
   cloud:
     config:
       server:
         git:
-          username: jk-crazy
-          password: joker3311
-          uri: 
+          uri: git@gitee.com:jk-crazy/spring-cloud-test.git
+          search-paths: /**

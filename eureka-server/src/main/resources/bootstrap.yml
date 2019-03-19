@@ -1,9 +1,9 @@
+spring:
+  application:
+    name: eureka-server
+server:
+  port: 8080
 eureka:
-  instance:
-    prefer-ip-address: true #show ip-address
-  #client:
-    #service-url:
-      #defaultZone: http://localhost:8081/eureka-server2 #register this project to the other register center ,remember to modify it at another project
   client:
     register-with-eureka: false #wheather to register this project
     fetch-registry: false #wheather to fetch the register project
