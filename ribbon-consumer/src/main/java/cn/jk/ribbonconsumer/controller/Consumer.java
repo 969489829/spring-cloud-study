@@ -25,6 +25,11 @@ public class Consumer {
 
     @RequestMapping
     public Person getPerson(){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         ResponseEntity<Person> entity = restTemplate.getForEntity("http://ribbon-provider/provider", Person.class);
         return entity.getBody();
     }
