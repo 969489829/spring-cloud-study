@@ -7,3 +7,5 @@ eureka:
   client:
     register-with-eureka: false #wheather to register this project
     fetch-registry: false #wheather to fetch the register project
+  server:
+    enable-self-preservation: false #关闭自我保护机制
