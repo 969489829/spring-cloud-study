@@ -2,6 +2,7 @@ zuul:
   routes:
     ribbon-provider: /pro/**
     ribbon-consumer: /con/**
+    feign-consumer: /fei/**
 eureka:
   client:
     service-url:

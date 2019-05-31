@@ -7,7 +7,7 @@ eureka:
 spring:
   kafka:
     bootstrap-servers:
-    - 118.24.138.39:9092
+      -118.24.138.39:9092
   application:
     name: config-server
   cloud:

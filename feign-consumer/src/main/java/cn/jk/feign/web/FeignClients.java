@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.GetMapping;
  *
  * </p>
  */
-@FeignClient("provider")
+@FeignClient("ribbon-provider")
 public interface FeignClients {
 
-    @GetMapping
+    @GetMapping("/provider")
     Person getPerson();
 }

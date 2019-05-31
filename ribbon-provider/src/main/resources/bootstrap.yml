@@ -1,22 +1,9 @@
 server:
-  port: 9901
+  port: 8080
 spring:
-  kafka:
-    bootstrap-servers:
-    - 118.24.138.39
   application:
-    name: ribbon-provider
-  cloud:
-    config:
-      discovery:
-        service-id: config-server
-        enabled: true
-      profile: test
+    name: provider
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8080/eureka
-management:
-  endpoint:
-    refresh:
-      enabled: true
+      defaultZone: http://eureka-server:8080/eureka

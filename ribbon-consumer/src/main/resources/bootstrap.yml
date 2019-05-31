@@ -1,9 +1,9 @@
 server:
-  port: 9902
+  port: 8080
 spring:
   application:
-    name: ribbon-consumer
+    name: consumer
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8080/eureka
+      defaultZone: http://eureka-server:8080/eureka

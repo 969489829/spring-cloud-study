@@ -26,6 +26,9 @@ public class Person {
         this.address = address;
     }
 
+    public Person() {
+    }
+
     public String getName() {
         return name;
     }
